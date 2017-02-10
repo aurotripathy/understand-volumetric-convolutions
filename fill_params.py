@@ -1,3 +1,38 @@
+import numpy as np
+
+def fill_input_from_file(inp, pad):
+    with open('data/input.txt', 'r') as f:
+        line = f.readline()
+        count = int(line.split(' ')[0])
+        dim = int(line.split(' ')[1])
+
+
+        for i in range(count):
+            for j in range(dim):
+                line = f.readline()
+                row = line.strip('\n')
+                row = [int(item) for item in row.split(' ')]
+                inp[i, j + pad, 0+pad:dim+pad] = np.copy(row)
+        return inp
+
+
+def fill_weights_from_file(weights):
+    with open('data/weights.txt', 'r') as f:
+        params = f.readline()
+        inp_feature_map, output_feature_map, k_size = [int(p) for p in params.split(' ')]
+
+        for i in range(inp_feature_map):
+            for o in range(output_feature_map):
+                for s in range(k_size):
+                    line = f.readline()
+                    print line
+                    row = line.strip('\n')
+                    row = [int(item) for item in row.split(' ')]
+                    print row
+                    weights[i, o, s, :] = np.copy(row)
+        return weights
+
+
 def fill_input(inp):
 
     inp[0,1,1] = 1
