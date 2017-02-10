@@ -7,6 +7,7 @@ import numpy as np
 from pudb import set_trace
 
 from fill_params import fill_weights, fill_bias, fill_input
+from fill_params import fill_input_from_file, fill_weights_from_file
 
 N = 3 # number of feature maps in the input
 I_R = 5 # number of rows (R) in the input (I)
@@ -30,11 +31,13 @@ out = np.zeros((M, O_R, O_C))
 weights = np.zeros((M, N, k_R, k_C))
 bias = np.zeros((M))
 # ...and initialization
-fill_input(inp)
-fill_weights(weights)
+# fill_input(inp)
+fill_input_from_file(inp, pad)
+# fill_weights(weights)
+set_trace()
+fill_weights_from_file(weights)
 fill_bias(bias)
 
-# set_trace()
 
 # The convolution 
 for m in range(M):
