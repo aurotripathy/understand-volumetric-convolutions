@@ -8,10 +8,10 @@ a 3D volume for the output (similarly, a spatial 2D plane times the feature map 
 Note, the size of the feature maps in the input and the output can be different 
 depending upon your network architecture. 
 These feature map sizes also affect the number of parameters 
-in the weights (with which you are concolving) and the baises. 
+in the weights (with which you are convolving) and the baises. 
 
-The ideas are lucidly explained [here](http://cs231n.github.io/convolutional-networks/#conv); 
-this project implements volumetric convolutions such that they can be grasped by beginners.
+The ideas are lucidly explained by [Andrej Karpathy](http://cs.stanford.edu/people/karpathy/) [here](http://cs231n.github.io/convolutional-networks/#conv); 
+this project simply implements volumetric convolutions such that they can be grasped by beginners (or by someone looking for a introductory refresher).
 
 To be sure, several performance optimizations are possible, but they get in the way of comprehension.
 
