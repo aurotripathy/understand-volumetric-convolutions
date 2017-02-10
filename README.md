@@ -15,7 +15,7 @@ this project implements volumetric convolutions such that they can be grasped by
 
 To be sure, several performance optimizations are possible, but they get in the way of comprehension.
 
-Two results can be verified from the two screen captures below.
+The implementation can be verified against the two screen captures below.
 
 ###### Screenhot 1
 ![alt text](/screen-shots/Screenshot\ from\ 2017-02-09\ 16\:15\:26.png "screen cap 1")
