@@ -2,8 +2,8 @@
 
 The code in intended to demystify volumentric convolutions, 
 a core operation in today's convolutional neural nets (CNNs), 
-where we have a 3D volume for the input (a spatial @D plane times the feature map count) and 
-a 3D volume for the output (similarly, a spatial 2D plane times the feature map count)
+where we have a 3D volume for the input (a spatial 2D plane times the feature map count) and 
+a 3D volume for the output (similarly, a spatial 2D plane times the feature map count). The kernels (aka, weights) are also 3D.
 
 Note, the size of the feature maps in the input and the output can be different 
 depending upon your network architecture. 
