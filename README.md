@@ -5,6 +5,11 @@ a core operation in today's convolutional neural nets (CNNs),
 where we have a 3D volume for the input (a spatial @D plane times the feature map count) and 
 a 3D volume for the output (similarly, a spatial 2D plane times the feature map count)
 
+Note, the size of the feature maps in the input and the output can be different 
+depending upon your network architecture. 
+These feature map sizes also affect the number of paramters in the weights and baises 
+with which you are concolving. 
+
 The ideas are lucidly explained [here](http://cs231n.github.io/convolutional-networks/#conv); 
 this project implements volumetric convolutions such that they can be grasped by beginners.
 
