@@ -38,9 +38,10 @@ def im2col(inp, ker):
 
 
 
+print im2col(inp, ker)
+
+# verify against a library implementation
 conv = signal.convolve2d(inp, ker, mode='valid')
 print conv
-
-print im2col(inp, ker)
 
 
