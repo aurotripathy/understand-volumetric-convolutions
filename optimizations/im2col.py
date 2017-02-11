@@ -15,11 +15,7 @@ ker  = np.array([[1,2,1],
                  [1,2,1],
                  [1,2,1]])
 
-
-def im2col(inp, ker):
-    ker = np.reshape(ker, (9))
-    print ker
-
+def gen_im2col(inp):
     all_patches = np.zeros((9,9))
 
     patch = np.zeros((9))
@@ -34,11 +30,14 @@ def im2col(inp, ker):
             # print patch
             all_patches[total_patches] = patch
             total_patches += 1
-    return np.reshape(np.dot(all_patches, ker), (3,3))
+    return all_patches
+
+def conv_with_im2col(im2col, ker):
+    ker = np.reshape(ker, (9))
+    return np.reshape(np.dot(im2col, ker), (3,3))
 
 
-
-print im2col(inp, ker)
+print conv_with_im2col(gen_im2col(inp), ker)
 
 # verify against a library implementation
 conv = signal.convolve2d(inp, ker, mode='valid')
