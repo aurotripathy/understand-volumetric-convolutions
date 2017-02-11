@@ -17,13 +17,13 @@ To be sure, several performance optimizations are possible, but they get in the 
 
 The implementation can be verified against the two screen captures below.
 
-##### Screenhot 1
+##### Test case from Screenshot 1
 
 Frozen from animation using randon inputs & weights [here](http://cs231n.github.io/convolutional-networks/#conv)
 
 ![alt text](/screen-shots/Screenshot\ from\ 2017-02-09\ 16\:15\:26.png "screen cap 1")
 
-##### Screenhot 2
+##### Test case from Screenshot 2
 
 Frozen from animation using randon inputs & weights [here](http://cs231n.github.io/convolutional-networks/#conv)
 
